@@ -1,6 +1,6 @@
 ## Portfolio Sender
 
- This is a simple script that entry to your portfolio to a configured email address.
+ This is a simple that sends entry to the entered email.
 
 ### Usage Guide
     
