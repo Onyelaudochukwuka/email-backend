@@ -3,8 +3,8 @@ require('dotenv').config();
 import { Request, Response, Router } from "express";
 const router = Router();
 router.post('/send', async (req: Request, res: Response, next) => {
-    const { message, email, first_name, last_name, title } = req.body;
-    if (!!message && !!email && !!first_name && !!last_name && !!title) {
+    const { message, user_email, first_name, last_name, title, my_email } = req.body;
+    if (!!message && !!user_email && !!first_name && !!last_name && !!title) {
         const courier = CourierClient(
             { authorizationToken: process.env.COURIER_AUTH_TOKEN });
 
@@ -12,11 +12,11 @@ router.post('/send', async (req: Request, res: Response, next) => {
             message: {
 
                 to: {
-                    email: "udochukwukaonyela@gmail.com"
+                    email: my_email
                 },
                 content: {
                     title: title,
-                    body: `Hi, I'm ${first_name} ${last_name},\n ${message} \n Here's my email: ${email} \n you can contact me on this email.`,
+                    body: `Hi, I'm ${first_name} ${last_name},\n ${message} \n Here's my email: ${user_email} \n you can contact me on this email.`,
 
                 }
             }
@@ -24,7 +24,7 @@ router.post('/send', async (req: Request, res: Response, next) => {
         return res.status(200).json({ message: "Message sent successfully", data });
     }
     else {
-        if(!email){
+        if (!user_email){
             return res.status(400).json({ message: "Email is required" });
         }
         if (!first_name) {
