@@ -2,8 +2,22 @@ import { CourierClient } from "@trycourier/courier";
 require('dotenv').config();
 import { Request, Response, Router } from "express";
 const router = Router();
-router.post('/send', async (req: Request, res: Response, next) => {
-    const { message, user_email, first_name, last_name, title, my_email } = req.body;
+interface Res {
+    message: string;
+    data?: {
+        requestId: string;
+    }
+}
+interface Req{
+    message: string;
+    user_email: string;
+    first_name: string;
+    last_name: string;
+    title: string;
+    my_email: string;
+}
+router.post('/send', async (req: Request<Req>, res: Response<Res>, next) => {
+    const { message, user_email, first_name, last_name, title, my_email }:Req = req.body;
     if (!!message && !!user_email && !!first_name && !!last_name && !!title) {
         const courier = CourierClient(
             { authorizationToken: process.env.COURIER_AUTH_TOKEN });
