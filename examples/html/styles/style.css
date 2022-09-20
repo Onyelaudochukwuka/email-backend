@@ -1,0 +1,103 @@
+:root {
+  --inputColor: #fafafa;
+  --textInput: #6d6d6d;
+  --buttonBackground: #222222;
+  --textColor: #181818;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+input,
+textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--textInput);
+  padding-block: 12px;
+  padding-left: 15px;
+}
+button {
+  width: calc(5 / 12 * 100%);
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--buttonBackground);
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  padding-block: 15px;
+  font-weight: 800;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  cursor: pointer;
+}
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--textColor);
+  margin-bottom: 10px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.input-container input {
+  padding-block: 12px;
+  padding-left: 15px;
+  transition-property: outline;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  border-radius: 3px;
+}
+.input-container input:focus {
+  outline: 2px solid var(--textColor);
+}
+textarea {
+  resize: none;
+}
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+form div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  form div {
+    flex-direction: column;
+  }
+}
+.container {
+  width: calc(10 / 12 * 100%);
+}
+svg {
+  width: 24px;
+  height: 24px;
+  fill: #fafafa;
+  color: #fff;
+  stroke: #fff;
+}
