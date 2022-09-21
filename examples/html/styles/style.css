@@ -131,12 +131,12 @@ svg {
   z-index: 100;
   transition: transform;
   transform-origin: center;
-  transition-duration: 500ms;
+  transition-duration: 750ms;
   transition-timing-function: ease-in-out;
-  transform: scale(0);
+  transform: translateX(-100%);
 }
 .popup.active{
-  transform: scale(1);
+  transform: translateX(0);
 }
 .popup__content{
   width: 400px;
