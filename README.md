@@ -4,7 +4,7 @@
 
 ### Usage Guide
     
-    The API is hosted on Railway: https://email-backend-production.up.railway.app/
+    The API is hosted on Railway: https://email-backend.cyclic.app/
 
 #### Send email
     /message/send
@@ -31,7 +31,7 @@ const options = {
     }),
 };
 
-fetch('https://email-backend-production.up.railway.app/message/send', options)
+fetch('https://email-backend.cyclic.app/message/send', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -43,7 +43,7 @@ fetch('https://email-backend-production.up.railway.app/message/send', options)
 
 import requests
 
-url = "https://email-backend-production.up.railway.app/message/send"
+url = "https://email-backend.cyclic.app/message/send"
 
 payload = {
     "my_email": "My Personal Email",
