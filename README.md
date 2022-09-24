@@ -1,6 +1,6 @@
 ## Portfolio Sender
 
- This is a simple that sends entry to the entered email.
+ This is an API that sends entry to the entered email.
 
 ### Usage Guide
     
