@@ -4,7 +4,7 @@
 
 ### Usage Guide
     
-    The API is hosted on Railway: https://email-backend.cyclic.app/
+    The API is hosted on Cyclic: https://email-backend.cyclic.app/
 
 #### Send email
     /message/send
