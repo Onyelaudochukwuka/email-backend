@@ -17,6 +17,7 @@
         "object-curly-spacing": "off",
         "semi": "error",
         "no-throw-literal": "off",
-        "require-jsdoc": "off"
+        "require-jsdoc": "off",
+        "camelcase": "off",
     }
 }
