@@ -1,0 +1,12 @@
+{
+    "doubleQuote": true,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "useTabs": false,
+    "trailingComma": "all",
+    "multiline": "auto",
+    "bracketSameLine": false,
+    "maxLineLength": 100,
+    "semi": true,
+    "arrowParens": "always"
+}
