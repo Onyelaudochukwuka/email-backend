@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "standard-with-typescript",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "quotes": ["error", "double"],
+        "indent": ["error", 4],
+        "max-len": ["error", { "code": 120 }],
+        "object-curly-spacing": "off",
+        "semi": "error",
+        "no-throw-literal": "off",
+        "require-jsdoc": "off"
+    }
+}
