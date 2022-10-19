@@ -9,7 +9,7 @@ type Options = {
     limit: string;
     extended: boolean;
 };
-const Options = { limit: "10mb", extended: true };
+const options:Options = { limit: "10mb", extended: true };
 
 const app: Application = express();
 app.use(cors());
